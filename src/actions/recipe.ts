@@ -1,18 +1,22 @@
 import { Recipe } from '../reducers/recipeReducer'
 
-export const FETCH_RECIPE_REQUEST = "FETCH_RECIPE_REQUEST";
-export const FETCH_RECIPE_SUCCESS = "FETCH_RECIPE_SUCCESS";
-export const FETCH_RECIPE_FAIL = "FETCH_RECIPE_FAIL"; //TODO: handle this action
+export const FETCH_RECIPE_REQUEST = "FETCH_RECIPE_REQUEST"
+export const FETCH_RECIPE_SUCCESS = "FETCH_RECIPE_SUCCESS"
+export const FETCH_RECIPE_FAIL = "FETCH_RECIPE_FAIL"
 
-interface FetchingRecipeAction {
+interface FetchRecipeRequestAction {
   type: typeof FETCH_RECIPE_REQUEST
 }
 
-interface FetchRecipeAction {
+interface FetchRecipeSuccessAction {
   type: typeof FETCH_RECIPE_SUCCESS
   payload: Recipe
 }
 
-export type RecipeActionTypes = FetchingRecipeAction | FetchRecipeAction
+interface FetchRecipeFailAction {
+  type: typeof FETCH_RECIPE_FAIL
+}
 
-export const fetchRecipe = (): FetchingRecipeAction => ({ type: FETCH_RECIPE_REQUEST })
+export type RecipeActionTypes = FetchRecipeRequestAction | FetchRecipeSuccessAction | FetchRecipeFailAction
+
+export const fetchRecipe = (): FetchRecipeRequestAction => ({ type: FETCH_RECIPE_REQUEST })

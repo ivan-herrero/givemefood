@@ -5,3 +5,7 @@
 .tryagain-container {
   text-align: center
 }
+
+.error-container {
+  margin-bottom: 1em;
+}

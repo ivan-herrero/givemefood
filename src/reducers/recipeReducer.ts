@@ -1,6 +1,6 @@
 import { Set } from 'immutable'
 
-import { RecipeActionTypes, FETCH_RECIPE_REQUEST, FETCH_RECIPE_SUCCESS } from '../actions/recipe'
+import { RecipeActionTypes, FETCH_RECIPE_REQUEST, FETCH_RECIPE_SUCCESS, FETCH_RECIPE_FAIL } from '../actions/recipe'
 import { RootState } from '.'
 
 export interface Ingredient {
@@ -30,18 +30,25 @@ export interface Recipe {
 
 const initialState: RootState = {
   showRecipe: false,
+  error: false
 }
 
 export default (state: RootState = initialState, action: RecipeActionTypes): RootState => {
   switch (action.type) {
     case FETCH_RECIPE_REQUEST:
       return {
-        showRecipe: true
+        showRecipe: true,
+        error: false
       }
     case FETCH_RECIPE_SUCCESS:
       return {
         ...state,
         recipe: action.payload
+      }
+    case FETCH_RECIPE_FAIL:
+      return {
+        showRecipe: false,
+        error: true
       }
     default:
       return state

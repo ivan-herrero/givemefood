@@ -9,6 +9,7 @@ import RecipeCardLoader from '../RecipeCard/RecipeCardLoader/RecipeCardLoader'
 export interface StateProps {
   showRecipe: boolean
   recipe?: Recipe
+  error: boolean
 }
 
 export interface DispatchProps {
@@ -37,6 +38,18 @@ const App: React.FC<Props> = (props) =>
     {props.showRecipe && props.recipe &&
       <Grid.Column>
         <RecipeCard {...props.recipe} />
+        <div className="tryagain-container">
+          <Button onClick={props.fetchRecipe}>
+            Try again!
+          </Button>
+        </div>
+      </Grid.Column>
+    }
+    {props.error &&
+      <Grid.Column textAlign="center">
+        <div className="error-container">
+          Oops! Something went wrong ¯\_(ツ)_/¯
+        </div>
         <div className="tryagain-container">
           <Button onClick={props.fetchRecipe}>
             Try again!
