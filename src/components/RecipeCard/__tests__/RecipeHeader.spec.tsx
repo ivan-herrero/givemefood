@@ -13,7 +13,7 @@ const props = {
 }
 
 describe("RecipeHeader component", () => {
-  const wrapper = mount(<RecipeHeader {...props} />);
+  const wrapper = mount(<RecipeHeader {...props} />)
 
   it("renders the title", () => {
     expect(wrapper.find(Header.Content).text()).toEqual(props.title)
@@ -27,7 +27,7 @@ describe("RecipeHeader component", () => {
   })
 
   it("doesn't render non-existing food sensitivities", () => {
-    const wrapper = shallow(<RecipeHeader {...props} dairyFree={false} glutenFree={false} vegan={false} vegetarian={false} />);
+    const wrapper = shallow(<RecipeHeader {...props} dairyFree={false} glutenFree={false} vegan={false} vegetarian={false} />)
     expect(wrapper.find({ name: "leaf" })).toHaveLength(0)
     expect(wrapper.find({ name: "tree" })).toHaveLength(0)
     expect(wrapper.find({ name: "sun outline" })).toHaveLength(0)

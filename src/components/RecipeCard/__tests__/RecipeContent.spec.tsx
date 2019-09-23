@@ -11,7 +11,7 @@ const props = {
 }
 
 describe("RecipeContent component", () => {
-  const wrapper = mount(<RecipeContent {...props} />);
+  const wrapper = mount(<RecipeContent {...props} />)
 
   it("renders instructions", () => {
     const instructions = wrapper.find(List).first().text()

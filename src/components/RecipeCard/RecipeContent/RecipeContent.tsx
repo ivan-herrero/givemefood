@@ -32,4 +32,4 @@ const RecipeContent: React.FC<Props> = (props) => {
   )
 }
 
-export default RecipeContent;
+export default RecipeContent

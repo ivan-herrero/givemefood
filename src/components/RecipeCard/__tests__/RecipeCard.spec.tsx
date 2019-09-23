@@ -9,7 +9,7 @@ import RecipeContent from '../RecipeContent/RecipeContent'
 import { recipeMock as recipe } from "../../../utils/test-utils"
 
 describe("RecipeCard component", () => {
-  const wrapper = shallow(<RecipeCard {...recipe} />);
+  const wrapper = shallow(<RecipeCard {...recipe} />)
 
   it("renders all subcomponents", () => {
     expect(wrapper.find(RecipeHeader)).toHaveLength(1)

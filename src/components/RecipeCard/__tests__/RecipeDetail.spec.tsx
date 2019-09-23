@@ -11,7 +11,7 @@ const props = {
 }
 
 describe("RecipeDetail component", () => {
-  const wrapper = mount(<RecipeDetail {...props} />);
+  const wrapper = mount(<RecipeDetail {...props} />)
 
   it("renders servings", () => {
     expect(wrapper.find({ name: "spoon" })).toHaveLength(1)

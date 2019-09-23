@@ -26,4 +26,4 @@ const RecipeDetail: React.FC<Props> = (props) => {
   )
 }
 
-export default RecipeDetail;
+export default RecipeDetail

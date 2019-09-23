@@ -6,6 +6,6 @@ import RecipeCardLoader from '../RecipeCardLoader/RecipeCardLoader'
 describe("RecipeCardLoader component", () => {
 
   it("renders", () => {
-    shallow(<RecipeCardLoader />);
+    shallow(<RecipeCardLoader />)
   })
 })

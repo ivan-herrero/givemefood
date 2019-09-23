@@ -30,4 +30,4 @@ const RecipeHeader: React.FC<Props> = (props) => {
   )
 }
 
-export default RecipeHeader;
+export default RecipeHeader
