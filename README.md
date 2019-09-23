@@ -8,6 +8,8 @@ Visit at: https://givemefood-ihn.herokuapp.com.
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org)
 - [redux-saga](https://redux-saga.js.org)
+- [Jest](https://jestjs.io)
+- [Enzyme](https://airbnb.io/enzyme/)
 - [Immutable.js](https://immutable-js.github.io/immutable-js/)
 - [Semantic UI React](https://react.semantic-ui.com)
 - [Spoonacular API](https://spoonacular.com)
