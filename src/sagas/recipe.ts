@@ -7,7 +7,7 @@ export function* recipeSaga() {
   yield takeLatest(FETCH_RECIPE_REQUEST, fetchRecipe)
 }
 
-function* fetchRecipe() {
+export function* fetchRecipe() {
   try {
     const recipe = yield call(fetchRandomRecipe)
     yield put({ type: FETCH_RECIPE_SUCCESS, payload: recipe })
