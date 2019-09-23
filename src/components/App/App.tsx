@@ -20,7 +20,7 @@ export interface Props extends StateProps, DispatchProps { }
 
 const App: React.FC<Props> = (props) =>
   <Grid container columns={1} verticalAlign='middle' className="app-container">
-    {!props.showRecipe &&
+    {!props.showRecipe && !props.error &&
       <Grid.Column textAlign='center'>
         <Header>
           To get a random recipe click on the button!
@@ -30,12 +30,12 @@ const App: React.FC<Props> = (props) =>
         </Button>
       </Grid.Column>
     }
-    {props.showRecipe && !props.recipe &&
+    {props.showRecipe && !props.recipe && !props.error &&
       <Grid.Column>
         <RecipeCardLoader />
       </Grid.Column>
     }
-    {props.showRecipe && props.recipe &&
+    {props.showRecipe && props.recipe && !props.error &&
       <Grid.Column>
         <RecipeCard {...props.recipe} />
         <div className="tryagain-container">
