@@ -1,8 +1,6 @@
 # Give Me Food
 If you've run out of ideas about what to cook, this app will give you a random recipe.
 
-Visit at: https://givemefood-ihn.herokuapp.com.
-
 ## Tech used
 - [TypeScript](https://www.typescriptlang.org)
 - [React](https://reactjs.org)
